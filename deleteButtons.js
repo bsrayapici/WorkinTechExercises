@@ -7,8 +7,13 @@ deleteButtons.forEach(function(button,index){
     event.target.parentElement.remove();
   });
 });
-
-
+----------------CHATGPT--------------
+   deleteButtons.forEach(button => {
+            button.addEventListener("click", function(event) {
+                event.target.parentElement.remove(); // 🗑️ Tıklanan öğenin `parentElement`'ini sil
+            });
+        });
+----------------CHATGPT--------------
 <!--
 <!DOCTYPE html>
 <html>
