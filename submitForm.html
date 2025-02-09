@@ -1,0 +1,52 @@
+Aşağıdaki form kodunu tamamla: 
+
+- email ve password alanlarının değeri değiştiğinde event.target.value kullanarak değerleri alıp konsola yazdır.
+- Form submit olduğunda Form submitted! yazısını konsola yazdır.
+
+-İpucu: change
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Olayları</title>
+</head>
+<body>
+
+    <h2>Giriş Formu</h2>
+
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <button type="submit">Gönder</button>
+    </form>
+
+    <script>
+        // ✅ Form Elemanlarını Seçme
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const form = document.getElementById("loginForm");
+
+        // ✅ Email ve Password Alanlarının Değerini Konsola Yazdırma
+        emailInput.addEventListener("change", function(event) {
+            console.log(`Email: ${event.target.value}`);
+        });
+
+        passwordInput.addEventListener("change", function(event) {
+            console.log(`Password: ${event.target.value}`);
+        });
+
+        // ✅ Form Submit Event'i (Form Gönderildiğinde)
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Sayfanın yenilenmesini engelle
+            console.log("Form submitted!");
+        });
+    </script>
+
+</body>
+</html>
