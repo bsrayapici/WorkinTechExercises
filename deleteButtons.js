@@ -3,7 +3,7 @@ import "./styles.css";
 const deleteButtons = document.querySelectorAll("li span");
 
 deleteButtons.forEach(function(button,index){
-  button[index] = button.addEventListener("click",(event)=>{
+  button = button.addEventListener("click",(event)=>{
     event.target.parentElement.remove();
   });
 });
