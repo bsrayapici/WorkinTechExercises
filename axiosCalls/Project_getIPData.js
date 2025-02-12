@@ -82,56 +82,68 @@ export async function getData() {
 
 export function cardOlustur(data) {
   // 📌 1. Ana `div.card` elementini oluştur
-  const card = document.createElement('div');
-  card.classList.add('card');
+  const card = document.createElement("div");
+  card.classList.add("card");
 
   // 📌 2. Ülke bayrağı için `img` elementi oluştur
-  const bayrak = document.createElement('img');
+  const bayrak = document.createElement("img");
   bayrak.src = `https://flaglog.com/codes/standardized-rectangle-120px/${data.ülkeKodu}.png`;
   bayrak.alt = `${data.ülke} Bayrağı`;
 
   // 📌 3. Bilgi konteynerini oluştur
-  const cardInfo = document.createElement('div');
-  cardInfo.classList.add('card-info');
+  const cardInfo = document.createElement("div");
+  cardInfo.classList.add("card-info");
 
   // 📌 4. IP adresi başlığı
-  const ipBaslik = document.createElement('h3');
-  ipBaslik.classList.add('ip');
+  const ipBaslik = document.createElement("h3");
+  ipBaslik.classList.add("ip");
   ipBaslik.textContent = data.sorgu;
 
   // 📌 5. Ülke bilgisi (ülke kodu ile)
-  const ulkeBilgisi = document.createElement('p');
-  ulkeBilgisi.classList.add('ulke');
+  const ulkeBilgisi = document.createElement("p");
+  ulkeBilgisi.classList.add("ulke");
   ulkeBilgisi.textContent = `${data.ülke} (${data.ülkeKodu})`;
 
-  // 📌 6. **Enlem ve Boylam Bilgisi (TESTE UYGUN)**
-  const enlemBoylam = document.createElement('p');
-  enlemBoylam.innerHTML = `Enlem: <span>${data.enlem}</span>, Boylam: <span>${data.boylam}</span>`;
+  // 📌 6. **Enlem ve Boylam Bilgisi (`innerHTML` KULLANMADAN)**
+  const enlemBoylam = document.createElement("p");
+  const enlemText = document.createTextNode(`Enlem: `);
+  const enlemValue = document.createElement("span");
+  enlemValue.textContent = data.enlem;
+
+  const boylamText = document.createTextNode(`, Boylam: `);
+  const boylamValue = document.createElement("span");
+  boylamValue.textContent = data.boylam;
+
+  // 📌 `p` içine sırasıyla metinleri ekleyelim
+  enlemBoylam.appendChild(enlemText);
+  enlemBoylam.appendChild(enlemValue);
+  enlemBoylam.appendChild(boylamText);
+  enlemBoylam.appendChild(boylamValue);
 
   // 📌 7. Şehir bilgisi
-  const sehir = document.createElement('p');
+  const sehir = document.createElement("p");
   sehir.textContent = `Şehir: ${data.şehir}`;
 
   // 📌 8. Saat dilimi bilgisi
-  const saatDilimi = document.createElement('p');
+  const saatDilimi = document.createElement("p");
   saatDilimi.textContent = `Saat dilimi: ${data.saatdilimi}`;
 
   // 📌 9. Para birimi
-  const paraBirimi = document.createElement('p');
+  const paraBirimi = document.createElement("p");
   paraBirimi.textContent = `Para birimi: ${data.parabirimi}`;
 
   // 📌 10. ISP (İnternet Servis Sağlayıcısı)
-  const isp = document.createElement('p');
+  const isp = document.createElement("p");
   isp.textContent = `ISP: ${data.isp}`;
 
-  // 📌 **Sıralamayı Doğru Şekilde Yapıyoruz!**
-  cardInfo.appendChild(ipBaslik); // 1️⃣ IP Adresi
+  // 📌 **TÜM ELEMENTLERİ DOĞRU SIRAYLA EKLEYELİM**
+  cardInfo.appendChild(ipBaslik);  // 1️⃣ IP Adresi
   cardInfo.appendChild(ulkeBilgisi); // 2️⃣ Ülke Bilgisi
   cardInfo.appendChild(enlemBoylam); // ✅ 3️⃣ **Enlem & Boylam Bilgisi (TESTE UYGUN)**
-  cardInfo.appendChild(sehir); // 4️⃣ Şehir Bilgisi
+  cardInfo.appendChild(sehir);  // 4️⃣ Şehir Bilgisi
   cardInfo.appendChild(saatDilimi); // 5️⃣ Saat Dilimi
   cardInfo.appendChild(paraBirimi); // 6️⃣ Para Birimi
-  cardInfo.appendChild(isp); // 7️⃣ ISP
+  cardInfo.appendChild(isp);  // 7️⃣ ISP
 
   // 📌 11. Kartı birleştir
   card.appendChild(bayrak);
