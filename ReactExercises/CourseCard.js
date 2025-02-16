@@ -1,5 +1,6 @@
 
-//Eğitim platformunuzda ders kartı (CourseCard) komponenti oluşturuyorsunuz. Aşağıdaki JSX kodunda hata ve eksikler var. Düzelt.
+//Eğitim platformunuzda ders kartı (CourseCard) komponenti oluşturuyorsunuz. 
+//Aşağıdaki JSX kodunda hata ve eksikler var. Düzelt.
 
 import { useState } from "react";
 
