@@ -44,7 +44,8 @@ export default function App() {
       
       {/* 📌 Sayacın dinamik değeri ve rengi */}
       <div id="sayici" style={stil}>
-//✔ Sayı: → String (sabit metin)
+//✔ Sayı: → String (sabit metin) string (metin) olarak HTML içinde yazılıyor. 
+//Yani değişken gibi bir tanımlama yapmamıza gerek yok, çünkü JSX içinde doğrudan metin olarak kullanıyoruz.
 //✔ {sayac} → JavaScript’teki sayac state’inin değeri
 //✔ {sayac % 2 === 0 ? "çift sayıdır" : "tek sayıdır"} → Ternary if ile çift/tek kontrolü
       Sayı: {sayac} {sayac % 2 === 0 ? "çift sayıdır" : "tek sayıdır"}
