@@ -5,7 +5,8 @@ Aşağıdaki React uygulamasını tamamla.
   Bu state'in başlangıç değeri ilkRuhHali olsun.
 - 'stil' nesnesinde 'color' özelliği sabit olarak "royalblue" olarak belirlenmiş. 
   Eğer ruhHali mutlu ise "royalblue", değilse "crimson" olacak şekilde kodu düzenle.
-- JSX'te bazı statik kodlanmış bilgiler var. Buralarda süslü paranetezler içinde JS ifadeleri kullanarak dinamik hale getir. 
+- JSX'te bazı statik kodlanmış bilgiler var. 
+  Buralarda süslü paranetezler içinde JS ifadeleri kullanarak dinamik hale getir. 
 - Yardımcı fonksiyonları yaz. 
 - class="code">Reset'e tıklandığında state'i ilkRuhHali yapsın.
 
