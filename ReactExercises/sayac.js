@@ -44,7 +44,11 @@ export default function App() {
       
       {/* 📌 Sayacın dinamik değeri ve rengi */}
       <div id="sayici" style={stil}>
-        Sayı: {sayac} {sayac % 2 === 0 ? "çift sayıdır" : "tek sayıdır"}
+//✔ Sayı: → String (sabit metin)
+//✔ {sayac} → JavaScript’teki sayac state’inin değeri
+//✔ {sayac % 2 === 0 ? "çift sayıdır" : "tek sayıdır"} → Ternary if ile çift/tek kontrolü
+      Sayı: {sayac} {sayac % 2 === 0 ? "çift sayıdır" : "tek sayıdır"}
+
       </div>
 
       {/* 📌 Butonlar */}
