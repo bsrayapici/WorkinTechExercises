@@ -6,32 +6,51 @@
 
 
 
+
+
 import { useState } from "react";
 
 export default function App() {
-  // 📌 1. `showSpinner` state'i (Başlangıç: true)
-  const [showSpinner, setShowSpinner] = useState(true);
+  // 📌 1. `sayac` state'i (Başlangıç: 0)
+  const [sayac, setSayac] = useState(0);
 
-  // 📌 2. Spinner'ı aç/kapat fonksiyonu
-  const toggleDondurucu = () => {
-    setShowSpinner(!showSpinner);
+  // 📌 2. Sayacı artırma fonksiyonu
+  const artirici = () => {
+    setSayac(sayac + 1);
+  };
+
+  // 📌 3. Sayacı azaltma fonksiyonu
+  const azaltici = () => {
+    setSayac(sayac - 1);
+  };
+
+  // 📌 4. Resetleme fonksiyonu
+  const reset = () => {
+    setSayac(0);
+  };
+
+  // 📌 5. Sayının çift veya tek olduğuna göre renk değişimi
+  const stil = {
+    fontSize: "1.5em",
+    marginBottom: "0.3em",
+    color: sayac % 2 === 0 ? "royalblue" : "crimson", // Çiftse mavi, tekse kırmızı
   };
 
   return (
-    <div className="widget-spinner container">
-      <h2>Spinner</h2>
+    <div className="widget-counter container">
+      <h2>Sayaç</h2>
       
-      {/* 📌 Eğer `showSpinner` true ise göster, değilse gizle */}
-      {showSpinner && (
-        <div id="dondürücü" className="spinner">
-          --+--
-        </div>
-      )}
+      {/* 📌 Sayacın dinamik değeri ve rengi */}
+      <div id="sayici" style={stil}>
+        Sayı: {sayac} {sayac % 2 === 0 ? "çift sayıdır" : "tek sayıdır"}
+      </div>
 
-      {/* 📌 Butonun metni duruma göre değiştirildi */}
-      <button id="toggleDondurucu" onClick={toggleDondurucu}>
-        {showSpinner ? "Gizle" : "Göster"}
-      </button>
+      {/* 📌 Butonlar */}
+      <div>
+        <button id="artirici" onClick={artirici}>Artırıcı</button>
+        <button id="decrement" onClick={azaltici}>Azaltıcı</button>
+        <button id="resetCount" onClick={reset}>Reset</button>
+      </div>
     </div>
   );
 }
