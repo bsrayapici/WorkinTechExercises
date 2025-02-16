@@ -5,7 +5,9 @@
 - Yardımcı fonksiyonları yaz. Tıklandığında sayac'ı bir artırmalı veya azaltmalı. Reset'e tıklandığında state'i sıfırlamalı.
 
 
-
+Sayaç
+Sayı: X çift sayıdır
+Artırıcı Azaltıcı Reset
 
 
 import { useState } from "react";
