@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: rgba(0, 0, 0, 0.614);
+  }
+  
+  .wrapper {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    /* margin: 1rem auto; */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    align-items: center;
+    border: 1px solid;
+  }
+  
+  header .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 1rem;
+  }
+  header nav a {
+    text-decoration: none;
+    color: rgba(87, 2, 2, 0.614);
+  }
+  header nav a:hover {
+    color: rgba(235, 16, 16, 0.88);
+    font-style: oblique;
+  }
+  
+  header .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .search .profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+  }
+  main {
+    border: 1px solid;
+    padding: 1.5rem;
+  }
+  
+  main .hero-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .hero-content .movie-info {
+    display: flex;
+  }
+  
+  #popular {
+    border: 1px solid;
+  }
+  #recommended {
+    border: 1px solid;
+  }
+  footer {
+    border: 1px solid;
+  }
