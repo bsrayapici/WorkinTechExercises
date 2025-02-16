@@ -49,7 +49,7 @@ Eğer sadece "inputValue = ''" yazsaydık, React bunu algılamazdı!
   const stil = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: /* ADIM 2 */ inputValue.length > 10 ? 'crimson' : 'blue',
+    color: /* ADIM 2 */ inputValue.length < 10 ? 'crimson' : 'blue',
   };
 
   return (
