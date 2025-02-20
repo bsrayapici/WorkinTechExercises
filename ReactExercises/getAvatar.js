@@ -1,6 +1,12 @@
 /*App component'i mount olduğunda https://reqres.in/api/users/1 adresine istek atsın ve başarılı bir istek sonucunda gelen data'daki url'i avatar state'ine eklesin.
 
-- İpucu: gelen reponse'daki data'yı konsola yazdırıp ne geldiğine bakabilirsin.*/
+- İpucu: gelen reponse'daki data'yı konsola yazdırıp ne geldiğine bakabilirsin.
+
+{ data: { id: 1, email: "george.bluth@reqres.in", first_name: "George", last_name: "Bluth",
+avatar: "https://reqres.in/img/faces/1-image.jpg" }, 
+support: { url: "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral", 
+text: "Tired of writing endless social media content? Let Content Caddy generate it for you." } }
+*/
 
 
 import { useState, useEffect } from "react";
