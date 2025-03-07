@@ -31,7 +31,7 @@ export default function App() {
             value="Almanca"
             onChange={handleLanguageChange}
           />
-          <span>Türkçe</span>
+          <span>Almanca</span>
         </label>
         <label>
           <input
