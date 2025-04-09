@@ -16,6 +16,7 @@ Bir öğrencinin adını `useReducer` hook'u ile yöneten basit bir React compon
 //	5.	Component yeniden render edilir, ekranda yeni isim görünür
 
 // Not : ✅ Tanım: dispatch() fonksiyonu, reducer fonksiyonuna bir mesaj (action) gönderir. Bu mesajda ne yapılması gerektiği (type) ve gerekirse hangi veriyle (payload) yapılacağı belirtilir. Reducer bu mesajı alır ve ona göre yeni bir state oluşturur.
+	// 🧩 1. reducer nedir? Bir fonksiyondur. Görevi: Gelen action’a göre mevcut state’i değiştirip yeni bir state döndürmek 🧩 2. dispatch nedir?Reducer’a bir action göndermek için kullanılan fonksiyondur.
 
 
 	
