@@ -15,6 +15,11 @@ Bir öğrencinin adını `useReducer` hook'u ile yöneten basit bir React compon
 //	4.	Reducer state.name’i günceller
 //	5.	Component yeniden render edilir, ekranda yeni isim görünür
 
+// Not : ✅ Tanım: dispatch() fonksiyonu, reducer fonksiyonuna bir mesaj (action) gönderir. Bu mesajda ne yapılması gerektiği (type) ve gerekirse hangi veriyle (payload) yapılacağı belirtilir. Reducer bu mesajı alır ve ona göre yeni bir state oluşturur.
+
+
+	
+
   import  { useReducer, useState } from "react";
 
 const initialState = { name: "Misafir" };
